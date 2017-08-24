@@ -2,4 +2,15 @@
     <string name="app_name">ClassicSnake</string>
     <string name="pause">Pause</string>
     <string name="resume">Resume</string>
+    <string name="start_game">START GAME</string>
+    <string name="resumeMenu">CONTINUE</string>
+    <string name="settings">SETTINGS</string>
+    <string name="level">Level:</string>
+    <string name="settingsTitle">SETTINGS</string>
+    <string name="easy">Easy</string>
+    <string name="_50x50">50x50</string>
+    <string name="_30x30">30x30</string>
+    <string name="tamanho_do_tabuleiro">Tamanho do tabuleiro:</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
 </resources>

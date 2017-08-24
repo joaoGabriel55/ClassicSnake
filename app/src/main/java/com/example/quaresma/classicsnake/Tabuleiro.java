@@ -6,9 +6,17 @@ import android.view.LayoutInflater;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 
-public class Tabuleiro extends AppCompatActivity  {
-    
+import java.util.ArrayList;
 
+public class Tabuleiro extends AppCompatActivity  {
+
+    int snakeTile;
+    int orientacao;
+    int cont;
+    int posX;
+    int posY;
+    boolean running;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,15 +32,12 @@ public class Tabuleiro extends AppCompatActivity  {
                 grid.addView(img);
             }
         }
-       /* ImageView[][] tabuleiro = new ImageView[50][50];
-        int[][] cobra = new int[2][2];
+        ArrayList<int [][]> cobra = new ArrayList<>();
 
-        for (int i = 0; i < 50; i++) {
-            for (int j = 0; j < 50; j++) {
 
-            }
-        }*/
     }
+
+
 
 
 }

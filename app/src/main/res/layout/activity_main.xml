@@ -15,19 +15,19 @@
         android:layout_width="match_parent"
         android:layout_height="174dp"
         android:layout_weight="0.47"
-        android:src="@drawable/snake" />
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/start"
         android:layout_width="321dp"
-        android:onClick="start"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="25dp"
         android:layout_weight="0.05"
         android:background="@color/green"
-        android:text="START GAME" />
+        android:onClick="start"
+        android:text="@string/start_game" />
 
     <Button
         android:id="@+id/resume"
@@ -37,16 +37,17 @@
         android:layout_marginBottom="5dp"
         android:layout_weight="0.05"
         android:background="@color/green"
-        android:text="CONTINUE" />
+        android:text="@string/resume" />
 
     <Button
         android:id="@+id/settings"
+        android:onClick="config"
         android:layout_width="321dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.05"
         android:background="@color/green"
-        android:text="SETTINGS" />
+        android:text="@string/settings" />
 
 
 </LinearLayout>
