@@ -7,7 +7,8 @@
     android:background="@android:color/holo_purple"
     tools:context="com.example.quaresma.classicsnake.Settings"
     tools:layout_editor_absoluteY="25dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    >
 
     <View
         android:id="@+id/view"
@@ -126,80 +127,100 @@
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp"
-        android:id="@+id/radioGroup2">
+        android:id="@+id/radioGroup2"
+        >
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/tab1"
+            android:onClick="setTabuleiro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:layout_marginLeft="29dp"
-            android:text="@string/_50x50"
+            android:text="@string/tab1"
             android:textColor="@color/green"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="386dp" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/tab2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="29dp"
-            android:text="@string/_30x30"
+            android:onClick="setTabuleiro"
+            android:text="@string/tab2"
             android:textColor="@color/green"
             tools:layout_editor_absoluteX="29dp"
             tools:layout_editor_absoluteY="327dp" />
     </RadioGroup>
 
+    <Button
+        android:id="@+id/confimar"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="34dp"
+        android:background="@color/green"
+        android:onClick="setConfig"
+        android:text="@string/confirm"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
         android:layout_marginEnd="3dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="169dp"
+        android:orientation="horizontal"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="167dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="3dp"
-        android:id="@+id/radioGroup">
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/easy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="29dp"
             android:layout_marginStart="29dp"
             android:layout_marginTop="0dp"
+            android:onClick="setDificuldade"
             android:text="@string/easy"
             android:textColor="@color/green"
-
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintTop_creator="1" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="29dp"
+            android:onClick="setDificuldade"
             android:text="@string/medium"
             android:textColor="@color/green"
-
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintRight_creator="1"
             tools:layout_constraintTop_creator="1"
             tools:text="Medium" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/hard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="37dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="37dp"
             android:layout_marginStart="39dp"
+            android:onClick="setDificuldade"
             android:text="@string/hard"
             android:textColor="@color/green"
-            app:layout_constraintLeft_toRightOf="@+id/radioButton2"
+            app:layout_constraintLeft_toRightOf="@+id/medium"
             app:layout_constraintRight_toRightOf="parent"
             tools:layout_constraintBaseline_creator="1"
             tools:layout_constraintLeft_creator="1"

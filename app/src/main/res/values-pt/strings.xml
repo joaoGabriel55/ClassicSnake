@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="resume">Continuar</string>
+    <string name="level">Nivel:</string>
+    <string name="medium">Médio</string>
+    <string name="pause">Pausar</string>
+    <string name="resumeMenu">Continuar</string>
+    <string name="settings">Configurações</string>
+    <string name="settingsTitle">Configurações</string>
+    <string name="start_game">Iniciar</string>
+    <string name="tamanho_do_tabuleiro">Tamanho do tabuleiro</string>
+    <string name="easy">Fácil</string>
+    <string name="hard">Difícil</string>
+    <string name="confirm">Confirmar</string>
+</resources>

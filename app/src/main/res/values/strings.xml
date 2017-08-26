@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ClassicSnake</string>
+    <string name="app_name" translatable="false">Classic Snake</string>
     <string name="pause">Pause</string>
     <string name="resume">Resume</string>
     <string name="start_game">START GAME</string>
@@ -7,10 +7,12 @@
     <string name="settings">SETTINGS</string>
     <string name="level">Level:</string>
     <string name="settingsTitle">SETTINGS</string>
-    <string name="easy">Easy</string>
-    <string name="_50x50">50x50</string>
-    <string name="_30x30">30x30</string>
-    <string name="tamanho_do_tabuleiro">Tamanho do tabuleiro:</string>
+    <string name="tab1" translatable="false">35x35</string>
+    <string name="tab2" translatable="false">20x20</string>
+    <string name="tamanho_do_tabuleiro">Grid size:</string>
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
+    <string name="easy">Easy</string>
+    <string name="confirm">Confirm</string>
+
 </resources>

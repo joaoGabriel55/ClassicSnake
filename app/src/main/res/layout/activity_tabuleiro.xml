@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_purple"
     android:orientation="vertical"
-    tools:context="com.example.quaresma.classicsnake.Tabuleiro">
+    tools:context="com.example.quaresma.classicsnake.Tabuleiro"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
 
 
-    <GridLayout
-        android:id="@+id/grid"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:columnCount="50"
-        android:rowCount="50"></GridLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="195dp"
-        tools:layout_editor_absoluteY="350dp"
-        tools:layout_editor_absoluteX="0dp">
-
-        <ImageButton
-            android:id="@+id/button4"
-            android:layout_width="71dp"
-            android:layout_height="71dp"
+    <ImageButton
+            android:id="@+id/right"
+            android:layout_width="75dp"
+            android:layout_height="67dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -33,18 +22,22 @@
             android:layout_y="207dp"
             android:background="@null"
             android:src="@drawable/bt4"
-            android:layout_marginStart="16dp"
-            tools:layout_constraintBottom_creator="1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="62dp"
-            app:layout_constraintLeft_toRightOf="@+id/button5"
-            android:layout_marginLeft="16dp" />
+        android:layout_marginEnd="90dp"
+        android:layout_marginStart="92dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/pause"
+        app:layout_constraintRight_toRightOf="@+id/textView2"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintLeft_toLeftOf="@+id/left"
+        android:layout_marginLeft="92dp"
+        android:layout_marginRight="90dp" />
 
         <ImageButton
-            android:id="@+id/button5"
-            android:layout_width="70dp"
-            android:layout_height="0dp"
+            android:id="@+id/left"
+            android:layout_width="65dp"
+            android:layout_height="72dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -52,23 +45,21 @@
             android:layout_y="207dp"
             android:background="@null"
             android:src="@drawable/bt5"
+            android:layout_marginStart="16dp"
             tools:layout_constraintTop_creator="1"
-            tools:layout_constraintRight_creator="1"
             tools:layout_constraintBottom_creator="1"
-            android:layout_marginStart="26dp"
-            app:layout_constraintBottom_toBottomOf="@+id/button4"
-            android:layout_marginEnd="32dp"
-            app:layout_constraintRight_toRightOf="@+id/button"
+            app:layout_constraintBottom_toBottomOf="@+id/down"
+            android:layout_marginTop="47dp"
             tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="44dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/button4"
-            android:layout_marginLeft="26dp"
-            android:layout_marginRight="32dp" />
+            app:layout_constraintTop_toTopOf="@+id/up"
+            android:layout_marginLeft="16dp" />
 
         <ImageButton
-            android:id="@+id/button"
+            android:id="@+id/down"
             android:layout_width="0dp"
-            android:layout_height="76dp"
+            android:layout_height="69dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -78,21 +69,21 @@
             android:src="@drawable/button"
             tools:layout_constraintTop_creator="1"
             tools:layout_constraintRight_creator="1"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintRight_toRightOf="@+id/button3"
-            android:layout_marginTop="11dp"
-            app:layout_constraintTop_toBottomOf="@+id/button3"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/up"
+            android:layout_marginTop="44dp"
             tools:layout_constraintLeft_creator="1"
-            app:layout_constraintLeft_toLeftOf="@+id/button3"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            app:layout_constraintHorizontal_bias="0.0" />
+            android:layout_marginBottom="37dp"
+            app:layout_constraintLeft_toLeftOf="@+id/up"
+            app:layout_constraintTop_toTopOf="@+id/right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
-            android:id="@+id/button3"
-            android:layout_width="71dp"
-            android:layout_height="76dp"
+            android:id="@+id/up"
+            android:layout_width="66dp"
+            android:layout_height="72dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -100,16 +91,21 @@
             android:layout_y="207dp"
             android:background="@null"
             android:src="@drawable/bt3"
-            android:layout_marginStart="68dp"
             tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
             tools:layout_constraintBottom_creator="1"
-            app:layout_constraintBottom_toBottomOf="@+id/button4"
-            android:layout_marginTop="41dp"
+            android:layout_marginStart="49dp"
+            app:layout_constraintBottom_toBottomOf="@+id/right"
+            android:layout_marginEnd="54dp"
+            app:layout_constraintRight_toRightOf="@+id/right"
+            android:layout_marginTop="43dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
             tools:layout_constraintLeft_creator="1"
-            android:layout_marginBottom="41dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="68dp"
+            android:layout_marginBottom="42dp"
+            app:layout_constraintLeft_toLeftOf="@+id/left"
+            android:layout_marginLeft="49dp"
+            android:layout_marginRight="54dp"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
@@ -118,20 +114,13 @@
             android:layout_height="wrap_content"
             android:background="@color/green"
             android:text="@string/resume"
+            android:layout_marginEnd="51dp"
             tools:layout_constraintRight_creator="1"
             tools:layout_constraintBottom_creator="1"
-            android:layout_marginBottom="28dp"
             app:layout_constraintBottom_toTopOf="@+id/pause"
-            android:layout_marginRight="51dp"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp"
-            app:layout_constraintVertical_bias="1.0"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="51dp" />
+            android:layout_marginBottom="28dp"
+            android:layout_marginRight="51dp" />
 
         <Button
             android:id="@+id/pause"
@@ -140,30 +129,25 @@
             android:background="@color/green"
             android:text="@string/pause"
             tools:layout_constraintRight_creator="1"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:layout_constraintLeft_creator="1"
-            android:layout_marginRight="51dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            tools:layout_constraintBottom_creator="1"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="51dp" />
+            app:layout_constraintRight_toRightOf="@+id/resume"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="61dp"
+            app:layout_constraintLeft_toLeftOf="@+id/resume" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="221dp"
-            android:layout_marginTop="15dp"
             android:text="SCORE: "
             android:textColor="@color/green"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pause" />
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/resume"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintLeft_toLeftOf="@+id/resume" />
 
         <TextView
             android:layout_width="20dp"
@@ -171,13 +155,47 @@
             android:text="0"
             android:textColor="@color/green"
             android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="22dp"
+            android:id="@+id/textView5"
+            tools:layout_constraintRight_creator="1"
+            app:layout_constraintRight_toRightOf="@+id/linearLayout"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
             app:layout_constraintLeft_toRightOf="@+id/textView2"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintHorizontal_bias="0.0" />
-    </android.support.constraint.ConstraintLayout>
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="22dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="356dp"
+        android:layout_height="321dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="2dp">
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="35"
+            android:gravity="center"
+            android:rowCount="35" />
+    </LinearLayout>
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

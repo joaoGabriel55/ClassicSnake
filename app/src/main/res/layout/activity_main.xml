@@ -26,8 +26,11 @@
         android:layout_marginTop="25dp"
         android:layout_weight="0.05"
         android:background="@color/green"
+        android:fontFamily="cursive"
         android:onClick="start"
-        android:text="@string/start_game" />
+        android:text="@string/start_game"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/resume"
@@ -37,17 +40,23 @@
         android:layout_marginBottom="5dp"
         android:layout_weight="0.05"
         android:background="@color/green"
-        android:text="@string/resume" />
+        android:fontFamily="cursive"
+        android:text="@string/resume"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/settings"
-        android:onClick="config"
         android:layout_width="321dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.05"
         android:background="@color/green"
-        android:text="@string/settings" />
+        android:fontFamily="cursive"
+        android:onClick="config"
+        android:text="@string/settings"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
 
 
 </LinearLayout>
