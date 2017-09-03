@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,9 +20,12 @@ public class Tabuleiro extends AppCompatActivity  {
     boolean running = true;
     int tam;
     int cont;
+    TextView pontosTxt;
+    int pontos = 0;
     ImageView img[][];
     ArrayList<int []> cobra;
     ArrayList<int []> fruta;
+    int directionActive=0 ;   //0-direita  1-esquerda   2-cima   3-baixo
     ImageButton up;
     ImageButton down;
     ImageButton left;
@@ -37,6 +42,8 @@ public class Tabuleiro extends AppCompatActivity  {
         grid.setColumnCount(tam);
         grid.setRowCount(tam);
 
+        atualizacaoDePontos();
+
         img = new ImageView[tam][tam];
 
         for (int i = 0; i < tam; i++){
@@ -48,7 +55,9 @@ public class Tabuleiro extends AppCompatActivity  {
             }
         }
 
-        up = (ImageButton) findViewById(R.id.up);
+        startInitialsParams();
+
+       /* up = (ImageButton) findViewById(R.id.up);
         down = (ImageButton) findViewById(R.id.down);
         left = (ImageButton) findViewById(R.id.left);
         right = (ImageButton) findViewById(R.id.right);
@@ -59,7 +68,43 @@ public class Tabuleiro extends AppCompatActivity  {
 
         fruta = new ArrayList<>();
         img[3][3].setImageResource(R.drawable.fruta);
-        startTimerThread();
+        startTimerThread();*/
+    }
+
+    public void atualizacaoDePontos(){
+        pontosTxt = (TextView) findViewById(R.id.score);
+        pontosTxt.setText(""+this.pontos);
+    }
+
+    public void clickControl(View v){
+
+        if (v.getId() == R.id.right && directionActive != 1) {
+            directionActive = 0;
+            left = (ImageButton) findViewById(R.id.left);
+        } else if (v.getId() == R.id.left && directionActive != 0){
+            directionActive = 1;
+            right = (ImageButton) findViewById(R.id.right);
+        } else if (v.getId() == R.id.upper && directionActive != 3){
+            directionActive = 2;
+            down = (ImageButton) findViewById(R.id.down);
+        } else if (v.getId() == R.id.down && directionActive != 2) {
+            directionActive = 3;
+            up = (ImageButton) findViewById(R.id.upper);
+        }
+
+    }
+
+    public void pause(){
+        if(running){
+            running = false;
+            startGame();
+            return;
+        } else {
+          running = true;
+            startGame();
+            return;
+        }
+
     }
 
     private void startTimerThread() {
@@ -107,11 +152,4 @@ public class Tabuleiro extends AppCompatActivity  {
             }
         }).start();
     }
-
-    public void mover(){
-        if(up.isPressed()){
-
-        }
-    }
-
 }
